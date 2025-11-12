@@ -321,13 +321,15 @@ copyAll.addEventListener('click', ()=>{
 });
 
 // search filter
-searchInput.addEventListener('input', (e)=>{
+searchInput.addEventListener('input', (e) => {
   const q = e.target.value.trim().toLowerCase();
-  document.querySelectorAll('.grid .card').forEach(card=>{
-    const t = (card.textContent||'').toLowerCase();
-    card.style.display = t.includes(q) ? '' : 'none';
+  document.querySelectorAll('.grid .card').forEach(card => {
+    const h3 = card.querySelector('h3');
+    const title = h3 ? h3.textContent.toLowerCase() : '';
+    card.style.display = title.includes(q) ? '' : 'none';
   });
 });
+
 
 /* Accessibility: Esc closes gate (if you want)
 document.addEventListener('keydown', (e)=>{
