@@ -321,7 +321,8 @@ copyAll.addEventListener('click', ()=>{
 });
 
 // search filter
-searchInput.addEventListener('input', (e) => {
+document.addEventListener('DOMContentLoaded', function() {
+  searchInput.addEventListener('input', (e) => {
   const q = e.target.value.trim().toLowerCase();
   document.querySelectorAll('.grid .card').forEach(card => {
     const h3 = card.querySelector('h3');
@@ -329,6 +330,7 @@ searchInput.addEventListener('input', (e) => {
     card.style.display = title.includes(q) ? '' : 'none';
   });
 });
+  
 
 
 /* Accessibility: Esc closes gate (if you want)
