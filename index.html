@@ -320,8 +320,7 @@ copyAll.addEventListener('click', ()=>{
   }).catch(()=> alert('Copy failed.'));
 });
 
-// search filter
-document.addEventListener('DOMContentLoaded', function() {
+
   searchInput.addEventListener('input', (e) => {
   const q = e.target.value.trim().toLowerCase();
   document.querySelectorAll('.grid .card').forEach(card => {
