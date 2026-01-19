@@ -55,6 +55,40 @@
     .floating-topright{ top:10px; right:10px; padding:8px 10px; font-size:14px; border-radius:8px; }
   }
   
+  .floating-topleft{
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1200;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  background:#ef4444;
+  color:white;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.floating-topleft:hover{
+  transform: translateY(-2px);
+  box-shadow:0 10px 22px rgba(0,0,0,.30);
+}
+.floating-topleft:focus{
+  outline:3px solid rgba(239,68,68,.18);
+  outline-offset:3px;
+}
+@media (max-width:420px){
+  .floating-topleft{
+    top:10px;
+    left:10px;
+    padding:8px 10px;
+    font-size:14px;
+    border-radius:8px;
+  }
+} 
   .wrap{max-width:1100px;margin:40px auto;padding:40px;position:relative;}
   header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
   .brand{display:flex;align-items:center;gap:14px}
@@ -160,6 +194,9 @@
 <a class="floating-topright" href="https://adityasingh701.github.io/Clock/" aria-label=" ">
   Clock
 </a>
+  <a class="floating-topleft" href="https://adityasingh701.github.io/weather_dashboard/" aria-label=" ">
+  Weather
+  </a>
 <!-- MAIN PAGE -->
 <div id="root" class="wrap content-hidden" aria-hidden="true">
   <header>
@@ -204,7 +241,7 @@
           <a class="btn" href="https://adityasingh701.github.io/creations/" target="_blank">Open</a>
         </div>
         <div>
-          <p>Update the rotational number to get a new amazing & awesome design (Downloadable Reel View).</p>
+          <p>Update the rotational number to get a new amazing & awesome design (Playable Reel View).</p>
        <div class="btn-row">
           <a class="btn" href="https://adityasingh701.github.io/moving-design/" target="_blank">Open</a>
         </div>
